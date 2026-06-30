@@ -532,7 +532,7 @@ void LMX2592_SETPOWER(uint16_t channel, uint16_t power) {
 #endif
 		} else {
 			power = (power << 8) & 0x3F00;
-			REG46 = (REG46 & 0xC0FF) | power;
+			REG46 = (REG46 & 0xC0F8) | power;
 			Wirte_Data(46, REG46);
 		}
 	} else if(channel == 1) { // Channel B
